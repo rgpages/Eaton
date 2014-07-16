@@ -24,6 +24,7 @@
 			height: 10px;
 			background-color: white;
 			z-index: 9999;
+			opacity:.8;
 		}
 		
 		.no-js body{
@@ -42,7 +43,7 @@
 	</style>
 	
 </head>
-<body class="js">
+<body>
 	<header id="zeppelin" role="banner">
 		<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
 		<p>Ashton Eaton - 9,039</p>
@@ -388,16 +389,7 @@
 		
 		var mystack = stack()
 			.on('activate', activate)
-			.on('deactivate', deactivate);
-		
-		
-		// load
-		
-		
-		$(document).ready(function(){
-			$('.js').show();
-		});
-	
+			.on('deactivate', deactivate);	
 	
 	</script>
 	
@@ -441,5 +433,14 @@
 	}());
 	</script>
 	
+	<script>
+		
+		// load
+		
+		$(document).ready(function(){
+			$('.js').show();
+		});
+		
+	</script>
 </body>
 </html>
