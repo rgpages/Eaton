@@ -1,7 +1,7 @@
 body{
 	/*background-color:#000;*/
 	color:white;
-	font-family: Cambria, Georgia , serif;
+	font-family: "MillerHeadlineLight", Cambria, Georgia , serif;
 }
 
 a:link { color: #64c9ff; text-decoration: none; }
@@ -116,8 +116,9 @@ section{
 
 .run_copy{
 	letter-spacing: .75em;
-	margin:3em 0 0 0;
+	margin-top:1em;
 	font-weight:100;
+	line-height: 1.3em;
 }
 
 /*FONTS*/
