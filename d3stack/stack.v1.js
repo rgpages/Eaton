@@ -1,4 +1,11 @@
 function stack() {
+	
+	if('ontouchstart' in document){}
+	else{
+		d3.selectAll('section#z').remove();
+	}
+	
+	
 	var stack = {},
 			size = [1280, 720],
 			fontSize = 32,
@@ -44,6 +51,9 @@ function stack() {
 				.on('resize.stack', resize)
 				.each(resize);
 	} else {
+		
+		//d3.selectAll('section#z').remove();
+		
 		var background = d3.select('body').insert('div', 'section')
 				.style('box-shadow', '0 8px 16px rgba(0,0,0,.3)');
 
@@ -160,9 +170,12 @@ function stack() {
 				dispatchEvent({type: 'activate'}, i1);
 				if (i1 < n - 1) dispatchEvent({type: 'activate'}, i1 + 1);
 			}
+			
 			sectionCurrent.style('display', 'block').style('opacity', 1);
 			sectionNext.style('display', 'block');
 			i = i1;
+			
+			//d3.selectAll('#z').style('display', 'none'); // does it but does it when fading out
 			
 			// This is called once every time the image changes
 			console.log('test');
@@ -175,6 +188,8 @@ function stack() {
 		}
 
 		dispatchEvent({type: 'scroll', offset: y = y1}, i);
+		
+		
 		
 		//console.log('test'); // adds together infinitely
 	}
