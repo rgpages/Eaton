@@ -30,9 +30,11 @@ function stack() {
 		section.style('position', 'relative');
 		
 		// my stuff
-		d3.selectAll('.run_full').style('display', 'none');
-		d3.selectAll('.run_splash').style('width', '50%');
-		d3.selectAll('.run_captionRight').style('left','0');
+		d3.selectAll('.run_full').style('display', 'none'); // display none on mobile to remove dup img
+		d3.selectAll('.run_splash').style('width', '50%'); // display half on mobile to see img
+		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
+		d3.selectAll('.progress-indicator-2').remove();
+		// testing for getting rid of sections on mobile 
 		d3.selectAll('#x').style('display', 'none');
 		d3.selectAll('#y').style('width', '100%');
 		d3.selectAll('#z').style('display', 'block');
