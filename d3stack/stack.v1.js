@@ -35,7 +35,7 @@ function stack() {
 		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
 		d3.selectAll('.progress-indicator-2').style('diplay', 'none');
 		// testing for getting rid of sections on mobile 
-		d3.selectAll('#x').style('display', 'none');
+		d3.selectAll('#x').remove();
 		d3.selectAll('#y').style('width', '100%');
 		d3.selectAll('#z').style('display', 'block');
 		//
@@ -137,12 +137,16 @@ function stack() {
 		if (i !== i1) {
 			if (i1 === i + 1) { // advance one
 				sectionCurrent.style('display', 'none');
+				// fade next audio
+				console.log('next');
 				sectionCurrent = sectionNext;
 				sectionNext = d3.select(section[0][i1 + 1]);
 				dispatchEvent({type: 'deactivate'}, i);
 				if (i1 < n - 1) dispatchEvent({type: 'activate'}, i1 + 1);
 			} else if (i1 === i - 1) { // rewind one
 				sectionNext.style('display', 'none');
+				// fade previous
+				console.log('previous');
 				sectionNext = sectionCurrent;
 				sectionCurrent = d3.select(section[0][i1]);
 				if (i < n - 1) dispatchEvent({type: 'deactivate'}, i + 1);
@@ -159,6 +163,9 @@ function stack() {
 			sectionCurrent.style('display', 'block').style('opacity', 1);
 			sectionNext.style('display', 'block');
 			i = i1;
+			
+			// This is called once every time the image changes
+			console.log('test');
 		}
 
 		if (y1 - i1 > (1 - scrollRatio) / 2) {
@@ -168,6 +175,8 @@ function stack() {
 		}
 
 		dispatchEvent({type: 'scroll', offset: y = y1}, i);
+		
+		//console.log('test'); // adds together infinitely
 	}
 
 	function keydown() {
@@ -223,4 +232,5 @@ function stack() {
 	d3.rebind(stack, dispatch, 'on');
 
 	return stack;
+	
 }
