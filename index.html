@@ -12,7 +12,7 @@
 	
 	<script>/*! https://gist.github.com/mhulse/4704893 */;(function(a){a.className=a.className.replace(/\bno-js\b/,'js')}(document.documentElement));</script>
 	
-	<link rel="stylesheet" href="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140714/1/styles/zeppelin.min.css">
+	<link rel="stylesheet" href="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140716/1/styles/zeppelin.min.css">
 	<link rel="stylesheet" href="styles.css">
 	
 	<style>
@@ -40,25 +40,6 @@
 		}
 		
 	</style>
-	
-	<script src="http://cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js"></script>
-	
-	<script>	
-		window.onload = function() {
-			var zeppelin = new Headroom(document.querySelector('header'), {
-				'tolerance': 10,
-				'offset': 205,
-				'classes': {
-					'initial': 'z_animated',
-					'pinned': 'z_slide-down',
-					'unpinned': 'z_slide-up',
-					'top': 'z_top',
-					'notTop': 'z_top'
-				}
-			});
-			zeppelin.init();
-		};
-	</script>
 	
 </head>
 <body class="js">
@@ -388,6 +369,7 @@
 		</div>
 	</section>
 	
+	<script src="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140716/1/scripts/zeppelin.min.js"></script>
 	
 	<script src="d3stack/d3.v3.min.js"></script>
 	<script src="d3stack/stack.v1.js"></script>
