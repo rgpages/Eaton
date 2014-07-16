@@ -36,9 +36,8 @@ function stack() {
 		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
 		d3.selectAll('.progress-indicator-2').style('diplay', 'none');
 		// testing for getting rid of sections on mobile 
-		d3.selectAll('#x').remove();
-		d3.selectAll('#y').style('width', '100%');
-		d3.selectAll('#z').style('display', 'block');
+		d3.selectAll('.run_captionL').remove();
+		d3.selectAll('.run_imgR').style('width', '100%');
 		//
 
 		d3.select(window)
