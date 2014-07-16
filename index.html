@@ -12,7 +12,7 @@
 	
 	<script>/*! https://gist.github.com/mhulse/4704893 */;(function(a){a.className=a.className.replace(/\bno-js\b/,'js')}(document.documentElement));</script>
 	
-	<link rel="stylesheet" href="zepplin/zep_styles.css">
+	<link rel="stylesheet" href="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140714/1/styles/zeppelin.min.css">
 	<link rel="stylesheet" href="styles.css">
 	
 	<style>
@@ -83,12 +83,10 @@
 	
 </head>
 <body>
-	<!--	>>>>	HEAD	<<<<	-->
-<!-- 	<header id="zeppelin" role="banner">
-		<h1 style="width:304px;float:left;"><a href="http://registerguard.com">The Register-Guard</a></h1>
-		<p style="margin:0 310px;width:304px;float:left;">Ashton Eaton</p>
-	</header> -->
-	<!--	>>>>	/HEAD	<<<<	-->
+	<header id="zeppelin" role="banner">
+		<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
+		<p>Ashton Eaton - 9,039</p>
+	</header>
 	
 	<div class="progress-indicator-2"></div>
 	
@@ -588,7 +586,6 @@
 	
 	<script src="d3stack/d3.v3.min.js"></script>
 	<script src="d3stack/stack.v1.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	
 	<script>
 	
@@ -605,46 +602,6 @@
 		var mystack = stack()
 			.on('activate', activate)
 			.on('deactivate', deactivate);
-			
-			
-		// progress bar
-			
-			
-		(function(){
-			var $w = $(window);
-			var $circ = $('.animated-circle');
-			var $progCount = $('.progress-count');
-			var $prog2 = $('.progress-indicator-2');
-
-			var wh, h, sHeight;
-
-			function setSizes(){
-				wh = $w.height();
-				h = $('body').height();
-				sHeight = h - wh;
-			}
-
-			setSizes();
-
-			$w.on('scroll', function(){
-				var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
-				updateProgress(perc);
-			}).on('resize', function(){
-				setSizes();
-				$w.trigger('scroll');
-			});
-
-			function updateProgress(perc){
-				var circle_offset = 126 * perc;
-				$circ.css({
-					'stroke-dashoffset' : 126 - circle_offset
-				});
-				$progCount.html(Math.round(perc * 100) + '%');
-
-				$prog2.css({width : perc*100 + '%'});
-			}
-
-		}());
 		
 		
 		// load
@@ -655,6 +612,46 @@
 		});
 	
 	
+	</script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script>
+	(function(){
+		var $w = $(window);
+		var $circ = $('.animated-circle');
+		var $progCount = $('.progress-count');
+		var $prog2 = $('.progress-indicator-2');
+
+		var wh, h, sHeight;
+
+		function setSizes(){
+			wh = $w.height();
+			h = $('body').height();
+			sHeight = h - wh;
+		}
+
+		setSizes();
+
+		$w.on('scroll', function(){
+			var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
+			updateProgress(perc);
+		}).on('resize', function(){
+			setSizes();
+			$w.trigger('scroll');
+		});
+
+		function updateProgress(perc){
+			var circle_offset = 126 * perc;
+			$circ.css({
+				"stroke-dashoffset" : 126 - circle_offset
+			});
+			$progCount.html(Math.round(perc * 100) + "%");
+
+			$prog2.css({width : perc*100 + '%'});
+		}
+
+	}());
 	</script>
 	
 </body>
