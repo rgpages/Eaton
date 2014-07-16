@@ -1,11 +1,5 @@
 function stack() {
 	
-	if('ontouchstart' in document){}
-	else{
-		d3.selectAll('section#z').remove();
-	}
-	
-	
 	var stack = {},
 			size = [1280, 720],
 			fontSize = 32,
