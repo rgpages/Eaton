@@ -15,7 +15,8 @@ function stack() {
 
 	var section = d3.selectAll('section')
 			.style('box-sizing', 'border-box')
-			.style('line-height', '1.35em');
+			//.style('line-height', '1.35em');
+			.style('line-height', 'auto');
 
 	var n = section.size();
 
@@ -26,11 +27,16 @@ function stack() {
 			//.style('background', '#333');
 
 	if (touchy) {
-		section
-				.style('position', 'relative');
+		section.style('position', 'relative');
+		
+		// my stuff
 		d3.selectAll('.run_full').style('display', 'none');
 		d3.selectAll('.run_splash').style('width', '50%');
 		d3.selectAll('.run_captionRight').style('left','0');
+		d3.selectAll('#x').style('display', 'none');
+		d3.selectAll('#y').style('width', '100%');
+		d3.selectAll('#z').style('display', 'block');
+		//
 
 		d3.select(window)
 				.on('resize.stack', resize)
