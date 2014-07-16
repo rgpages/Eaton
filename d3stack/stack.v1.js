@@ -34,7 +34,7 @@ function stack() {
 		d3.selectAll('.run_full').style('display', 'none'); // display none on mobile to remove dup img
 		d3.selectAll('.run_splash').style('width', '50%'); // display half on mobile to see img
 		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
-		d3.selectAll('.progress-indicator-2').style('diplay', 'none');
+		d3.selectAll('div.progress-indicator-2').remove();
 		// testing for getting rid of sections on mobile 
 		d3.selectAll('.run_captionL').remove();
 		d3.selectAll('.run_imgR').style('width', '100%');
