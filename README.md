@@ -2,7 +2,7 @@
 
 This is a story template example about Ashton Eaton using [stack.js](https://github.com/mbostock/stack).
 
-It's a work in progress.
+![screenshot](https://github.com/rgpages/Eaton/blob/gh-pages/default.png)
 
 [Working example](http://pages.registerguard.com/Eaton/) & compare with [print layout](http://pages.registerguard.com/Eaton/media/EatonLayout.pdf):
 
