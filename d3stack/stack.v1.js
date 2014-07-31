@@ -55,7 +55,7 @@ function stack() {
 		
 		// var background = d3.select('body').insert('div', 'section')
 		// 		.style('box-shadow', '0 8px 16px rgba(0,0,0,.3)');
-		var background = d3.select('#run_browser').insert('div', 'section')
+		var background = d3.select('body').insert('div', 'section')
 				.style('box-shadow', '0 8px 16px rgba(0,0,0,.3)');
 
 		section
