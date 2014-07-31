@@ -32,6 +32,7 @@
 			max-width: 980px;
 			margin: 0 auto;
 			font-size: 1.25em;
+			margin-bottom: 5em;
 		}
 		
 		.byline{
@@ -45,7 +46,7 @@
 <body>
 	<header id="zeppelin" role="banner">
 		<h6><a href="http://registerguard.com">The Register-Guard</a></h6>
-		<p>Ashton Eaton - 9,039</p>
+		<p>Ashton Eaton - It's his world</p>
 	</header>
 	
 	<div class="progress-indicator-2"></div>
@@ -87,77 +88,11 @@
 	
 	<a href="../index.html">Back to photo story</a>
 	
+	<div style="width:100%;text-align:center;font-size:.75em;font-style:italic;margin-top: 5em">
+		The Register-Guard &copy; 2012
+	</div>
+	
 	<script src="http://static.registerguard.com/v5/zeppelin/prod/0.1.0/20140716/1/scripts/zeppelin.min.js"></script>
 	
-	<script src="d3stack/d3.v3.min.js"></script>
-	<script src="d3stack/stack.v1.js"></script>
-	
-	<script>
-	
-		// http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery
-		// if not touch screen remove #z
-		if('ontouchstart' in document){}
-		else{
-			d3.selectAll('section.run_bye').remove();
-		}
-		//
-	
-		// stack
-		
-		var mystack = stack()
-			.on('activate', activate)
-			.on('deactivate', deactivate);	
-	
-	</script>
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	
-	<script>
-	(function(){
-		var $w = $(window);
-		var $circ = $('.animated-circle');
-		var $progCount = $('.progress-count');
-		var $prog2 = $('.progress-indicator-2');
-
-		var wh, h, sHeight;
-
-		function setSizes(){
-			wh = $w.height();
-			h = $('body').height();
-			sHeight = h - wh;
-		}
-
-		setSizes();
-
-		$w.on('scroll', function(){
-			var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
-			updateProgress(perc);
-		}).on('resize', function(){
-			setSizes();
-			$w.trigger('scroll');
-		});
-
-		function updateProgress(perc){
-			var circle_offset = 126 * perc;
-			$circ.css({
-				"stroke-dashoffset" : 126 - circle_offset
-			});
-			$progCount.html(Math.round(perc * 100) + "%");
-
-			$prog2.css({width : perc*100 + '%'});
-		}
-
-	}());
-	</script>
-	
-	<script>
-		
-		// load
-		
-		$(document).ready(function(){
-			$('.js').show();
-		});
-		
-	</script>
 </body>
 </html>

@@ -120,30 +120,6 @@ section{
 	right:20%
 }
 
-.run_credits{
-	width:100%;
-	text-align: center;
-	font-family: Arial, sans-serif;
-	letter-spacing: .1em;
-	font-weight: 600;
-	margin-top: 20%
-}
-
-.run_trg{
-	width:100%;
-	margin:0 auto;
-	font-family: "RGWeb", serif;
-	font-size: 3em;
-	font-weight:100;
-}
-
-.run_copy{
-	letter-spacing: .75em;
-	margin-top:1em;
-	font-weight:100;
-	line-height: 1.3em;
-}
-
 /*FONTS*/
 
 @font-face {
