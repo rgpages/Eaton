@@ -28,26 +28,34 @@ function stack() {
 			//.style('background', '#333');
 
 	if (touchy) {
-		section.style('position', 'relative');
 		
-		// my stuff
-		d3.selectAll('.run_full').style('display', 'none'); // display none on mobile to remove dup img
-		d3.selectAll('.run_splash').style('width', '50%'); // display half on mobile to see img
-		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
-		d3.selectAll('div.progress-indicator-2').remove();
-		// testing for getting rid of sections on mobile 
-		d3.selectAll('.run_captionL').remove();
-		d3.selectAll('.run_imgR').style('width', '100%');
-		//
-
+		// do this stuff...
 		d3.select(window)
 				.on('resize.stack', resize)
 				.each(resize);
+				
+		//but also do this stuff
+		
+		d3.selectAll('.run_full').style('display', 'none'); // display none on mobile to remove dup img
+		d3.selectAll('.run_splash').style('width', '50%'); // display half on mobile to see img
+		d3.selectAll('.run_captionRight').style('left','0'); // move right caption left on mobile
+		d3.selectAll('div.progress-indicator-2').remove(); // get rid of progress indicator
+		d3.selectAll('.run_captionL').remove(); // get rid of left caption
+		d3.selectAll('.run_imgR').style('width', '100%'); // stretch image all the way across
+		d3.selectAll('.run_vert').style('width', '40%').style('right', '30%');
+		// d3.selectAll('.run_vert').style('width', '60%').style('position', 'relative').style('left', '20%');//.style('margin-left', '40%');
+		// d3.selectAll('section').style('margin-bottom', '20px');
+
+		
+		
+		
 	} else {
 		
 		//d3.selectAll('section#z').remove();
 		
-		var background = d3.select('body').insert('div', 'section')
+		// var background = d3.select('body').insert('div', 'section')
+		// 		.style('box-shadow', '0 8px 16px rgba(0,0,0,.3)');
+		var background = d3.select('#run_browser').insert('div', 'section')
 				.style('box-shadow', '0 8px 16px rgba(0,0,0,.3)');
 
 		section

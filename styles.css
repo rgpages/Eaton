@@ -1,7 +1,18 @@
 body{
 	/*background-color:#000;*/
 	color:white;
-	font-family: "MillerHeadlineLight", Cambria, Georgia , serif;
+	font-family: Cambria, Georgia , serif;
+	font-size: 2em;
+	letter-spacing: .02em;
+}
+
+#run_browser{
+	display: block;
+}
+
+#run_mobile{
+	display: none;
+	background-color: white;
 }
 
 a:link { color: #64c9ff; text-decoration: none; }
@@ -16,12 +27,11 @@ section{
 	background-color:#000;
 }
 
-#run_head{
+.run_head{
 	text-align: center;
-	color:black;
 }
 
-#run_head h1{
+.run_head h1{
 	font-family:"MillerHeadlineBold", Georgia, serif;
 	font-weight: 900;
 	font-size: 4em;
@@ -52,7 +62,7 @@ section{
 .run_captionL{
 	float:left;
 	width:25%;
-	margin-top:4em;
+	margin-top:2em;
 	font-size: .8em;
 	padding:2.5%;
 }
@@ -82,6 +92,7 @@ section{
 	font-size:.8em;
 	margin-bottom: 1em;
 	letter-spacing: .08em;
+	position: relative;
 }
 
 .run_time{ color:red; }
@@ -92,9 +103,21 @@ section{
 
 .run_points{ padding-top:.2em; }
 
+.run_photocred{
+	text-align: right;
+	font-variant: small-caps;
+	font-size: .5em;
+}
+
 .run_bold{
 	font-weight:700;
 	padding-bottom:.2em;
+}
+
+.run_vert{
+	width: 30%;
+	position:absolute;
+	right:20%
 }
 
 .run_credits{
