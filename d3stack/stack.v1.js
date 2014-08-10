@@ -43,6 +43,9 @@ function stack() {
 		d3.selectAll('.run_captionL').remove(); // get rid of left caption
 		d3.selectAll('.run_imgR').style('width', '100%'); // stretch image all the way across
 		d3.selectAll('.run_vert').style('width', '40%').style('right', '30%');
+		d3.selectAll('#run_head_head').style('padding-top', '40px');
+		d3.selectAll('#run_sub_sub').style('padding-top', '40px');
+		d3.selectAll('.run_head').style('margin-bottom', '-20px');
 		// d3.selectAll('.run_vert').style('width', '60%').style('position', 'relative').style('left', '20%');//.style('margin-left', '40%');
 		// d3.selectAll('section').style('margin-bottom', '20px');
 
